@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skracarka linków</title>
+</head>
+<body>
+
+    <h1>Skracarka linków</h1>
+    <ul>
+    {% for link in links %}
+        <li>
+            Odwiedzony {{ link.count }} razy, ostatnio {{ link.last_visited }}:
+            <a href="http://localhost:8000/{{ link.id }}/">{{ link.target }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>
